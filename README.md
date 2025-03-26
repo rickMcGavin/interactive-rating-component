@@ -37,10 +37,6 @@ Users should be able to:
 - [TypeScript](https://www.typescriptlang.org/) - For type safety
 - [Styled Components](https://styled-components.com/) - For styles
 - [Vite](https://vitejs.dev/) - Build tool
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Mobile-first workflow
 
 ### What I learned
 
