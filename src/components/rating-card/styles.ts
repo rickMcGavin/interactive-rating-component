@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StarContainer = styled.div`
-  background: #262e38;
+  background: ${({ theme }) => theme.colors.darkBlue.light};
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -18,7 +18,7 @@ export const StarContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.text.white};
   font-size: 28px;
   margin-bottom: 15px;
 
@@ -28,7 +28,7 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  color: #969fad;
+  color: ${({ theme }) => theme.colors.text.lightGray};
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 24px;
@@ -41,8 +41,14 @@ export const RatingContainer = styled.div`
 `;
 
 export const RatingButton = styled.button<{ selected?: boolean }>`
-  background: ${(props) => (props.selected ? "#fc7614" : "#262e38")};
-  color: ${(props) => (props.selected ? "#ffffff" : "#7c8798")};
+  background: ${(props) =>
+    props.selected
+      ? props.theme.colors.primary
+      : props.theme.colors.darkBlue.light};
+  color: ${(props) =>
+    props.selected
+      ? props.theme.colors.text.white
+      : props.theme.colors.text.mediumGray};
   width: 51px;
   height: 51px;
   border-radius: 50%;
@@ -53,8 +59,8 @@ export const RatingButton = styled.button<{ selected?: boolean }>`
   transition: all 0.2s ease;
 
   &:hover {
-    background: #fc7614;
-    color: #ffffff;
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.text.white};
   }
 
   @media (max-width: 480px) {
@@ -65,8 +71,8 @@ export const RatingButton = styled.button<{ selected?: boolean }>`
 `;
 
 export const SubmitButton = styled.button`
-  background: #fc7614;
-  color: #ffffff;
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.text.white};
   width: 100%;
   padding: 14px;
   border-radius: 22.5px;
@@ -78,18 +84,12 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 
   &:disabled {
-    background: #262e38;
-    color: #7c8798;
+    background: ${({ theme }) => theme.colors.darkBlue.light};
+    color: ${({ theme }) => theme.colors.text.mediumGray};
     cursor: not-allowed;
   }
-
-  &:hover {
-    background: #ffffff;
-    color: #fc7614;
-  }
-
-  &:hover:disabled {
-    background: #262e38;
-    color: #7c8798;
+  &:hover:not(:disabled) {
+    background: ${({ theme }) => theme.colors.text.white};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;

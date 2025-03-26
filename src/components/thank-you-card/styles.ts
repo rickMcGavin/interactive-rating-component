@@ -6,8 +6,8 @@ export const ThankYouContainer = styled.div`
 `;
 
 export const RatingResult = styled.div`
-  background: #262e38;
-  color: #fc7614;
+  background: ${({ theme }) => theme.colors.darkBlue.light};
+  color: ${({ theme }) => theme.colors.primary};
   padding: 4px 20px;
   border-radius: 22.5px;
   display: inline-block;
@@ -16,7 +16,7 @@ export const RatingResult = styled.div`
 `;
 
 export const ThankYouTitle = styled.h1`
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.text.white};
   font-size: 28px;
   margin-bottom: 15px;
 
@@ -26,7 +26,7 @@ export const ThankYouTitle = styled.h1`
 `;
 
 export const ThankYouDescription = styled.p`
-  color: #969fad;
+  color: ${({ theme }) => theme.colors.text.lightGray};
   font-size: 15px;
   line-height: 1.6;
 `;

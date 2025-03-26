@@ -1,5 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import RatingCard from "./components/rating-card/RatingCard";
+import { theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -10,21 +11,21 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Overpass', sans-serif;
-    background-color: #131518;
+    background-color: ${({ theme }) => theme.colors.darkBlue.darker};
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.text.white};
   }
 `;
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <RatingCard />
-    </>
+    </ThemeProvider>
   );
 }
 
