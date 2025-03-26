@@ -72,6 +72,6 @@ npm run build
 
 ## Author
 
-- Website - (https://rickmcgavin.dev)[Rick McGavin]
+- Website - [https://rickmcgavin.dev](Rick McGavin)
 - Frontend Mentor - [@rickMcGavin](https://www.frontendmentor.io/profile/rickMcGavin)
 - Twitter - [@rickMcGavin](https://www.twitter.com/rickMcGavin)
